@@ -1,0 +1,5 @@
+<% @lessons.each do |lesson| %>
+	<%= lesson.subject %><br />
+	<%= image_tag(lesson.image) %><br />
+	<%= lesson.description %>
+<% end %>

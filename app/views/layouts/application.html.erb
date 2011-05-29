@@ -7,8 +7,32 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+	<nav>
+		<div id="logo">
+			<span>Logo bro</span>
+		</div>
+		<ul>
+			<li><%= link_to 'html', '#' %></li>
+			<li><%= link_to 'css', '#' %></li>
+			<li><%= link_to 'ps', '#' %></li>
+			<li><%= link_to 'jquery', '#' %></li>
+			<li><%= link_to 'ruby', '#' %></li>
+			<li><%= link_to 'rails', '#' %></li>
+		</ul>
+	</nav>
+	<div id="headerbg">
+	</div>
+	<div class="container">
+	<header>
+		<div id="hd-image">
+			<%= image_tag("hdrails.png") %>
+		</div>
+	</header>
+	<section>
+	<%= yield %>
+	</section>
+	<footer>
+	</footer>
+	</div>
 </body>
 </html>
