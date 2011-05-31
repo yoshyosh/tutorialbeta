@@ -11,7 +11,7 @@ nav{
 	height: 40px;
 	background-color: black;
 	overflow: hidden;
-
+	-webkit-box-shadow: #000000 2px 2px 8px;
 }
 
 #logo {
@@ -65,7 +65,10 @@ nav li a:hover {
 	margin: 0 auto;
 	padding: 0;
 	width: 750px;
-	margin-top: -230px;
+}
+
+.header {
+	width: 750px;
 }
 
 #headerbg {
@@ -77,11 +80,76 @@ nav li a:hover {
 	width: 100%;
 }
 
-#hd-image {
-	padding-top: 80px;
-	padding-left: 0px;
+#hd-title {
+	float: left;
+	padding-top: 70px;
+	width: 200px;
+	font-size: 8em;
+	margin: 0;
+}
+
+#hd-description {
+	padding-top: 125px;
+	margin-left: 250px;
+	width: 500px;
+	font-size: 1.1em;
+	line-height: 1.25em;
+	color: #a7a7a7;
 }
 
 section {
 	clear: all;
+	margin-top: 60px;
+}
+
+#intro {
+	width: 500px;
+}
+
+#intro h2 {
+	font-size: 1.5em;
+	color: #fff;
+	background-color: #000;
+	width: 265px;
+	padding-top: 1px;
+	padding-bottom: 3px;
+	font-family: arial, helvetica, sans-serif;
+	padding-left: 10px;
+}
+
+#intro p{
+	margin-top: -10px;
+	
+}
+
+section #stage-1, #stage-2, #stage-3{
+	padding-top: 10px;
+}
+
+section #stage-1 h3 {
+	font-size: 1em;
+	color: #fff;
+	background-color: #000;
+	width: 270px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-family: arial, helvetica, sans-serif;
+	padding-left: 10px;
+}
+
+.stageunits ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-left: -25px;
+}
+
+.stageunits li{
+	float: left;
+	width: 160px;
+	height: 160px;
+	border: 1px solid black;
+	text-align: center;
+	margin-left: 25px;
+	margin-bottom: 20px;
 }
