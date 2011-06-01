@@ -50,6 +50,7 @@ class LessonsController < ApplicationController
 	
 	def show
 		@lesson = Lesson.find(params[:id])
+		@stage1	= @lesson.units.where( :stage_id => 1 )
 		
 		respond_to do |format|
 			format.html

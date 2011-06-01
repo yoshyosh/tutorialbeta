@@ -21,7 +21,9 @@
 		</p>
 		<div class="stageunits">
 			<ul>
-				<li><%= image_tag("tryruby.png") %></li>
+				<% @stage1.each do |stage| %>
+				<li><%= stage.title %></li>
+				<% end %>
 				<li><%= image_tag("tryruby.png") %></li>
 				<li><%= image_tag("tryruby.png") %></li>
 				<li><%= image_tag("tryruby.png") %></li>

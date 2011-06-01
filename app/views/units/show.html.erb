@@ -1,0 +1,5 @@
+<h1>This is the units index page</h1>
+<%= image_tag(@unit.image) %><br />
+<%= link_to "edit", edit_unit_path %>
+<%= link_to "destroy", units_path, :method => :delete,
+																 :confirm => 'Are you sure bro?' %>
