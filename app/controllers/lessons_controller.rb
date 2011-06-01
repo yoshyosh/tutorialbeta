@@ -1,12 +1,16 @@
 class LessonsController < ApplicationController
 	
+	layout :choose_layout
+	
 	def index
 		@lessons = Lesson.all
-		
+
 		respond_to do |format|
 		format.html
 		format.xml { render :xml => @lessons }
 		end
+		
+		
 	end
 	
 	def new
@@ -37,6 +41,7 @@ class LessonsController < ApplicationController
 	
 	def show
 		@lesson = Lesson.find(params[:id])
+		
 	end
 	
 	def edit
@@ -48,4 +53,13 @@ class LessonsController < ApplicationController
 	def destroy
 	end
 	
+	private
+	
+	def choose_layout
+		if [ 'index' ].include? action_name
+			'home'
+		else
+			'lesson'
+		end
+	end
 end

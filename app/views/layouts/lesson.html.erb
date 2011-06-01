@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tutorialbeta</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<nav>
+		<div id="logo">
+			<span>Logo bro</span>
+		</div>
+		<ul>
+			<li><%= link_to 'html', '#' %></li>
+			<li><%= link_to 'css', '#' %></li>
+			<li><%= link_to 'ps', '#' %></li>
+			<li><%= link_to 'jquery', '#' %></li>
+			<li><%= link_to 'ruby', '#' %></li>
+			<li><%= link_to 'rails', '#' %></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<header>
+			<div id="hd-title">
+			<span>rails</span>
+			</div>
+			<div id="hd-description">
+				<span>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+					do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+					enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+					ut.
+				</span>
+			</div>
+		</header>
+		<section>
+		<%= yield %>
+		</section>
+		<footer>
+		</footer>
+	</div>
+</body>
+</html>

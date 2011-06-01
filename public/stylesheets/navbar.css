@@ -153,3 +153,17 @@ section #stage-1 h3 {
 	margin-left: 25px;
 	margin-bottom: 20px;
 }
+
+/* Home page lessons */
+
+#homelessons ul {
+	list-style:none;
+	margin: 0;
+	padding: 0;
+	margin-left: -5px;
+}
+
+#homelessons li {
+	float: left;
+	margin-left: 5px;
+}
