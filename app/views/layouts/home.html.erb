@@ -9,7 +9,9 @@
 <body>
 	<div class="container">
 		<header>
+			<% if notice %>
 			<p id="notice"><%= notice %></p>
+			<% end %>
 		</header>
 		<section>
 		<%= yield %>

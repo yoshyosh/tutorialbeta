@@ -5,7 +5,7 @@ class LessonsController < ApplicationController
 	def index
 		@lessons = Lesson.all
 		
-		flash[:notice] = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		flash.now[:notice] = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 			sed do eiusmod tempor incididunt ut labore et dolore magna
 			aliqua. Ut enim ad minim veniam, quis nostrud exercitation
 			ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
@@ -51,21 +51,51 @@ class LessonsController < ApplicationController
 	def show
 		@lesson = Lesson.find(params[:id])
 		
+		respond_to do |format|
+			format.html
+			format.xml { render :xml => @lesson }
+		end
 	end
 	
 	def edit
+		@lesson = Lesson.find(params[:id])
+		
+		respond_to do |format|
+			format.html
+			format.xml { render :xml => @lesson }
+		end
 	end
 	
 	def update
+		@lesson = Lesson.find(params[:id])
+		
+		respond_to do |format|
+			if @lesson.update_attributes(params[:lesson])
+				format.html { redirect_to @lesson,
+										:notice => 'Lesson was successfully updated.'}
+				format.xml { head :ok }
+			else
+				format.html { render :action => "edit" }
+				format.xml { render :xml => @lesson.errors,
+										:status => :unprocessable_entity }
+			end
+		end
 	end
 	
 	def destroy
+		@lesson = Lesson.find(params[:id])
+		@lesson.destroy
+		
+		respond_to do |format|
+			format.html { redirect_to root_path }
+			format.xml { head :ok }
+		end
 	end
 	
 	private
 	
 	def choose_layout
-		if [ 'index' ].include? action_name
+		if [ 'index', 'edit'].include? action_name
 			'home'
 		else
 			'lesson'
