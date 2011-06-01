@@ -154,7 +154,34 @@ section #stage-1 h3 {
 	margin-bottom: 20px;
 }
 
+/* Notices */
+div.container #notice { 
+	background-color: #A4E7A0;
+	border: 1px solid #26722D;
+	margin-top: 50px;
+	width: 91%;
+	padding: 5px;
+}
+
+#error { background-color: #F0A8A8; border: 1px solid #900; }
+
+#notice p, #error p {margin-left: 20px; padding: 0; font-size: .75em; color: #000; }
+
+#notice a, #error a { text-decoration: none; padding: 0 3px; }
+
+#notice a { border: 1px solid #26722D; color: #26722D; }
+
+#error a { border: 1px solid #900; color: #900; }
+
+#notice a:hover, #error a:hover { color: #333; border: 1px solid #333; }
+
+
 /* Home page lessons */
+
+#homelessons {
+	margin: 0;
+	padding: 0;
+}
 
 #homelessons ul {
 	list-style:none;
